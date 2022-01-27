@@ -1,0 +1,10 @@
+services:
+  app:
+    image: clue/json-server
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - type: bind
+        source: ./db.json
+        target: /data/db.json
